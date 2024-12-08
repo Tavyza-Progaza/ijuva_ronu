@@ -2,15 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* for tailwind */
-
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
 }
 
+@font-face {
+  font-family: Yrigakesha;
+  src: url(/resources/fonts/Yrigakesha.otf);
+}
+
+@font-face {
+  font-family: Yriga;
+  src: url(/resources/fonts/Yriga.ttf);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif; /* font needed */
+  font-family: Yrigakesha, Helvetica, sans-serif;
 }

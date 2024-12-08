@@ -13,7 +13,6 @@ app.prepare().then(() => {
   const expapp = express()
 
   expapp.use(express.json({ limit: '5mb' }))
-  expapp.use(express.static('./resources'))
   
   // handle api routings here
 
@@ -24,7 +23,7 @@ app.prepare().then(() => {
   var server = http.createServer(expapp)
 
   server.listen(port, (err) => {
-    if (err) throw error
+    if (err) throw err
     console.log('> Ready on localhost:' + port)
   })
 })
