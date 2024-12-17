@@ -54,7 +54,7 @@ export default function HeaderClock() {
   })
 
   return (
-    <span className="text-sm">
+    <span className="text-sm hidden md:block">
       {jaž} {long}
     </span>
   )
