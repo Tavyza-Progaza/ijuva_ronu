@@ -16,13 +16,23 @@ export default function Header() {
     },
     {
       id: 1,
-      text: 'testing number 2',
-      url: '/testing/2'
+      text: 'Word Lookup',
+      url: '/wordlookup'
     },
     {
       id: 2,
-      text: 'testing number 3',
-      url: '/testing/3'
+      text: 'Tavyza Information',
+      url: '/info'
+    },
+    {
+      id: 3,
+      text: 'Library',
+      url: '/library'
+    },
+    {
+      id: 4,
+      text: 'Resources',
+      url: '/downloads'
     }
   ]
 
