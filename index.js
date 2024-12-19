@@ -9,12 +9,16 @@ const port = (dev ? 3000 : 80)
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+const wordlookupApi = require('./apiroutes/wordlookup')
+
 app.prepare().then(() => {
   const expapp = express()
 
-  expapp.use(express.json({ limit: '5mb' }))
+  expapp.use(express.json({ limit: '10mb' }))
+
+  expapp.disable('x-powered-by')
   
-  // handle api routings here
+  expapp.use('/api/wordlookup', wordlookupApi)
 
   expapp.get('*', (req, res) => {
     return handle(req, res)
